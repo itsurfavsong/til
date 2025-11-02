@@ -31,9 +31,9 @@ It’s my way of documenting growth — one small step at a time.
 
 Each topic lives in its own folder:  
 
-📦 TIL
-┣ 📁 frontend/
-┣ 📁 backend/
-┣ 📁 cs-basics/
-┣ 📁 tools/
-┗ 📁 etc/
+📦 TIL <br>
+┣ 📁 frontend/ <br>
+┣ 📁 backend/ <br>
+┣ 📁 cs-basics/ <br>
+┣ 📁 tools/ <br>
+┗ 📁 etc/ <br>
