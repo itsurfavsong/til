@@ -1,12 +1,13 @@
 # 🧩 SQL Basic Query (1)
 
-1. Retrieve all columns from a table (All data)
+1. SELECT clause
+
+1-1. Retrieve all columns from a table (All data)
 ```sql
 SELECT * 
 FROM employees;
 ```
----
-2. Retrieve specific columns (selecting some of columns)
+Retrieve specific columns (selecting some of columns)
 ```sql
 SELECT 
 	name,
@@ -15,7 +16,7 @@ SELECT
 FROM employees;
 ```
 ---
-3. WHERE clause: Retrieve data that matches a specific column value (shows who got that emp_id)
+2. WHERE clause: Retrieve data that matches a specific column value (shows who got that emp_id)
 ```sql
 SELECT *
 FROM employees
@@ -31,7 +32,7 @@ WHERE
 	AND gender = 'F';
 ```
 ---
-3-1. Filter by date
+2-1. Filter by date
 ```sql
 SELECT *
 FROM employees
@@ -39,7 +40,7 @@ WHERE
 	hire_at >= '2023-01-01';
 ```
 ---
-3-2. Retrieve only employees who are still working (NULL check) ('fire_at is null' means someone hasn't quit and still be at work)
+2-2. Retrieve only employees who are still working (NULL check) ('fire_at is null' means someone hasn't quit and still be at work)
 ```sql
 SELECT *
 FROM employees
@@ -47,10 +48,9 @@ WHERE
 	fire_at IS NULL;
 ```
 ---
-3-3. Using AND and OR together in a WHERE clause <br>
+2-3. Using AND and OR together in a WHERE clause <br>
 
-Retrieve employees who were hired after 2025-01-01 or before 2000-01-01, <br>
-and have already left the company.
+Retrieve employees who were hired after 2025-01-01 or before 2000-01-01, and have already left the company.
 ```sql
 SELECT *
 FROM employees
@@ -62,7 +62,7 @@ WHERE
 	AND fire_at IS NOT NULL;
 ```
 ---
-3-4. BETWEEN operator: Retrieve data within a specific range (YYYY-MM-DD ~ YYYY-MM-DD)
+2-4. BETWEEN operator: Retrieve data within a specific range (YYYY-MM-DD ~ YYYY-MM-DD)
 ```sql
 SELECT *
 FROM employees
@@ -78,7 +78,7 @@ WHERE
 	AND emp_id <= 10010;
 ```
 ---
-3-5. IN operator: Retrieve data that matches one of several values (you can use 'IN' for collecting multiple numbers)
+2-5. IN operator: Retrieve data that matches one of several values (you can use 'IN' for collecting multiple numbers)
 ```sql
 SELECT *
 FROM employees 
