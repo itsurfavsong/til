@@ -1,8 +1,10 @@
 # 🧩 SQL Basic Query (2)
 
-LIKE operator: Retrieve data by pattern matching <br>
+2-6. LIKE operator: Retrieve data by pattern matching <br>
+
 % : matches any number of characters <br>
 \_ : matches exactly one character <br>
+
 Retrieve employees whose names end with ‘james’
 
 ```sql
@@ -11,9 +13,6 @@ FROM employees
 WHERE
 	name LIKE '%james';
 ```
-
----
-
 Retrieve employees whose name pattern matches ‘garbie\_\_’
 
 ```sql
@@ -22,9 +21,6 @@ FROM employees
 WHERE
 	name LIKE 'garbie__';
 ```
-
----
-
 Retrieve employees whose names match the pattern ‘%hi\_’
 
 ```sql
@@ -33,10 +29,9 @@ FROM employees
 WHERE
 	name LIKE '%hi_';
 ```
-
 ---
+3. ORDER BY clause: Sort data (not summarize data) <br>
 
-ORDER BY clause: Sort data <br>
 ASC = ascending order <br>
 DESC = descending order
 
@@ -45,9 +40,6 @@ SELECT *
 FROM employees
 ORDER BY name ASC, birth ASC;
 ```
-
----
-
 Retrieve employees hired after 2000, sorted by name and birthdate:
 
 ```sql
@@ -59,9 +51,6 @@ ORDER BY
 	name ASC,
 	birth ASC;
 ```
-
----
-
 Retrieve female employees who are still working, sorted by name and birthdate:
 
 ```sql
@@ -74,26 +63,24 @@ ORDER BY
 	name ASC,
 	birth ASC;
 ```
-
 ---
-
-DISTINCT keyword: Remove duplicate rows
+3-1. DISTINCT keyword: Remove duplicate rows
 
 ```sql
 SELECT DISTINCT name, birth
 FROM employees
 ORDER BY name ASC;
 ```
-
 ---
+4. GROUP BY clause: Group and summarize data <br>
 
-GROUP BY clause: Group and summarize data <br>
-Aggregate functions <br>
+[Aggregate functions👇️] <br>
 MAX() – Maximum value <br>
 MIN() – Minimum value <br>
 COUNT() – Count of rows <br>
 AVG() – Average value <br>
 SUM() – Sum of values <br>
+
 Retrieve the highest salary per employee:
 
 ```sql
@@ -124,10 +111,9 @@ SELECT
 FROM employees
 GROUP BY gender;
 ```
-
 ---
+5. LIMIT and OFFSET clauses: Restrict the number of rows returned <br>
 
-LIMIT and OFFSET: Restrict the number of rows returned <br>
 Retrieve the first 10 employees sorted by employee ID:
 
 ```sql
@@ -146,10 +132,8 @@ WHERE fire_at IS NOT NULL
 ORDER BY emp_id ASC
 LIMIT 5 OFFSET 5;
 ```
-
 ---
-
-ex) Retrieve top 5 currently highest-paid employees
+Question 1 - Retrieve top 5 currently highest-paid employees
 
 ```sql
 SELECT
@@ -161,10 +145,8 @@ WHERE end_at IS NULL
 ORDER BY salary DESC
 LIMIT 5;
 ```
-
 ---
-
-Basic structure of a SELECT statement
+**Basic structure of a SELECT statement**
 
 ```sql
 SELECT [DISTINCT] [column_name]
