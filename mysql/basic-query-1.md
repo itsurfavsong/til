@@ -2,7 +2,7 @@
 
 1. SELECT clause
 
-1-1. Retrieve all columns from a table (All data)
+Retrieve all columns from a table (All data)
 ```sql
 SELECT * 
 FROM employees;
