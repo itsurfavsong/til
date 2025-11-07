@@ -32,8 +32,13 @@ It’s my way of documenting growth — one small step at a time.
 Each topic lives in its own folder:  
 
 📦 TIL <br>
-┣ 📁 frontend/ <br>
+┣ 📁 html-css/ <br>
+┣ 📁 javascript/ <br>
+┣ 📁 react/ <br>
+┣ 📁 sql/ <br>
+<!--
 ┣ 📁 backend/ <br>
 ┣ 📁 cs-basics/ <br>
 ┣ 📁 tools/ <br>
 ┗ 📁 etc/ <br>
+ -->
