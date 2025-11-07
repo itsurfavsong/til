@@ -31,12 +31,14 @@ It’s my way of documenting growth — one small step at a time.
 
 Each topic lives in its own folder:  
 
-📦 TIL <br>
-┗ 📁 documents <br>
-    ┣ 📁 html-css/ <br>
-    ┣ 📁 javascript/ <br>
-    ┣ 📁 react/ <br>
-    ┣ 📁 sql/ <br>
+<pre>
+📦 TIL
+┗ 📁 documents
+   ┣ 📁 html-css/
+   ┣ 📁 javascript/
+   ┣ 📁 react/
+   ┗ 📁 sql/
+</pre>
 <!--
 ┣ 📁 backend/ <br>
 ┣ 📁 cs-basics/ <br>
